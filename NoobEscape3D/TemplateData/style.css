@@ -1,27 +1,34 @@
 html {
     box-sizing: border-box;
 }
+
 *, *:before, *:after {
     box-sizing: inherit;
 }
+
 html, body {
     height: 100%;
 }
+
 canvas {
     display: block;
 }
+
 body {
     margin: 0;
 }
+
 #unity-container {
     width: 100%;
     height: 100%;
 }
+
 #unity-canvas {
     width: 100%;
     height: 100%;
-    background: #231F20;
+    background: {{{ BACKGROUND_COLOR }}};
 }
+
 #loading-cover {
     position: absolute;
     top: 0;
@@ -32,6 +39,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 #unity-loading-bar {
     flex: 1 1 auto;
     display: flex;
@@ -39,28 +47,38 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.unity-container {
+    width: 150px;
+}
+
 #unity-logo {
     text-align: center;
 }
+
 #unity-logo img {
-    max-width: 80%;
+    height: 150px;
 }
+
 #unity-progress-bar-empty {
-    width: 80%;
-    height: 24px;
-    margin: 10px 20px 20px 10px;
+    height: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: left;
     border: 1px solid white;
     padding: 2px;
 }
+
 #unity-progress-bar-full {
     width: 0%;
     height: 100%;
     background: white;
 }
+
 .light #unity-progress-bar-empty {
     border-color: black;
 }
+
 .light #unity-progress-bar-full {
     background: black;
 }
@@ -81,6 +99,7 @@ body {
   width: 5em;
   height: 5em;
 }
+
 .spinner {
   margin: 10px;
   font-size: 10px;
@@ -93,6 +112,7 @@ body {
   transform: translateZ(0);
   animation: spinner-spin 1.1s infinite linear;
 }
+
 @keyframes spinner-spin {
   0% {
     transform: rotate(0deg);
@@ -101,5 +121,3 @@ body {
     transform: rotate(360deg);
   }
 }
-
-
