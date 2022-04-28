@@ -135,6 +135,9 @@
         }).then((unityInstance) => {
           unityI = unityInstance;
           loadingCover.style.display = "none";
+
+          unityI.SendMessage('VKSDK', 'Initialization');
+          
           if (canFullscreen) {
             if (!hideFullScreenButton) {
               fullscreenButton.style.display = "";
